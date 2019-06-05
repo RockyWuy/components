@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true, // 使 TypeScript 生成 sourcemaps
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths":  {
+      "@components/*": ["src/components/*"]
+    },
+    // "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查, 解决引入styled-components时所报错误
+    // "types": [ // 要包含的类型声明文件名列表 去掉react-native  解决引入styled-components时所报错误 同时引入react及react-native
+      // "node", 
+      // "react",
+      // "react-dom",
+      // "styled-components",
+      // "react-native"
+    // ]
+  },
+  "include": [
+    "./src/**/*",
+  ],
+  "exclude": [
+    "node_modules" // 这个目录下的代码不会被 typescript 处理
+  ],
+}
