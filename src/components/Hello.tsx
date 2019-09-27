@@ -23,7 +23,7 @@ const Button = styled.button<TitleProps>`
     border: 2px solid palevioletred;
     border-radius: 3px;
     ::before{
-        content: 'ss'
+        content: 'sss'
     }
     :hover{
         color: red
@@ -33,6 +33,10 @@ const Button = styled.button<TitleProps>`
 const PrimaryButton = styled(Button)`
     color: tomato;
 `;
+
+// const PrimaryButton2 = Button.extends`
+//     color: #fff;
+// `;
 
 const Thing = styled.div`
   && {
@@ -109,6 +113,7 @@ const Label = styled.span`
   }
 `;
 
+
 export class Hello extends React.Component<HelloProps, {}> {
     public OnClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
         console.log('lll', e);
@@ -122,6 +127,7 @@ export class Hello extends React.Component<HelloProps, {}> {
             <div>
                 <Title>Hello from {this.props.compiler} and {this.props.framework}</Title>
                 <Button onClick={this.OnClick} isActive>Primary</Button>
+                <Button onClick={this.OnClick} >Primary</Button>
                 <PrimaryButton>tomato</PrimaryButton>
                 <GlobalStyle />
                 <Thing>Im blue, da ba dee da ba daa</Thing>
@@ -135,6 +141,7 @@ export class Hello extends React.Component<HelloProps, {}> {
                     </Icon>
                     <Label>Hovering my parent changes my style!</Label>
                 </Link>
+                <Button as="a">linka</Button>
             </div>
         );
     }

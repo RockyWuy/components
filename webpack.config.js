@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 默认生成index.html
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // 清理dist文件
+const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin'); // 清理dist文件
 const path = require('path');
 
 module.exports = {
@@ -34,8 +35,10 @@ module.exports = {
 
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
-        alias: { // 使用typescript需在tsconfig做同样配置
-            '@components': path.resolve(__dirname, 'src/components')
-        }
+        // 使用typescript需在tsconfig做同样配置 
+        // alias: { 
+        //     '@components': path.resolve(__dirname, 'src/components')
+        // },
+        plugins: [new TsConfigPathsPlugin({})] // 使用 tsconfig-paths-webpack-plugin 插件也可
     },
 };
