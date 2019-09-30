@@ -9,7 +9,8 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths":  {
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@themes/*": ["src/themes/*"]
     }
     // "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查, 解决引入styled-components时所报错误
     // "types": [ // 要包含的类型声明文件名列表 去掉react-native  解决引入styled-components时所报错误 同时引入react及react-native

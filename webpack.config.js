@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 默认生成index.html
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // 清理dist文件
-const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin'); // 清理dist文件
+const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
 
 module.exports = {
