@@ -2,15 +2,18 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true, // 使 TypeScript 生成 sourcemaps
-    "noImplicitAny": true,
+    "noImplicitAny": true, // 在表达式和声明上有隐含的 any类型时报错
+    "suppressImplicitAnyIndexErrors": true, // 阻止 --noImplicitAny对缺少索引签名的索引对象报错
     "module": "commonjs",
     "target": "es5",
     "allowJs": true,
     "jsx": "react",
     "baseUrl": ".",
+    // "noEmitOnError": false, // 报错是不生成输出文件
     "paths":  {
       "@components/*": ["src/components/*"],
-      "@themes/*": ["src/themes/*"]
+      "@themes/*": ["src/themes/*"],
+      "@utils/*": ["src/utils/*"]
     }
     // "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查, 解决引入styled-components时所报错误
     // "types": [ // 要包含的类型声明文件名列表 去掉react-native  解决引入styled-components时所报错误 同时引入react及react-native

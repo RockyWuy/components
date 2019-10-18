@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Webpack App</title>
-  </head>
-  <body>
-      <div id="root"></div>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Components</title>
+		<style>
+			body {
+				margin: 0 !important;
+				background: #f5f5f9;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script>
+			(function(win){
+				let docEl = document.documentElement;
+				let fontEl = document.createElement('style');
+				let metaEl = document.querySelector("meta[name='viewport']");
+
+				let dpr = win.devicePixelRatio || 1;
+				let rem = docEl.clientWidth * dpr / 37.5; // 750分辨率下 1rem = 20px
+				let scale = 1 / dpr;
+
+				// 设置viewport, 进行缩放, 达到高清效果
+				metaEl.setAttribute('content', 'width='+dpr*docEl.clientWidth+',initial-scale='+scale+',minimum-scale='+scale+',maximum-scale='+scale+',user-scalable=no')
+
+				// 动态写入样式
+				docEl.firstElementChild.appendChild(fontEl);
+				fontEl.innerHTML = 'html{font-size: ' + rem + 'px!important;}';
+			})(window)
+		</script>
+	</body>
 </html>

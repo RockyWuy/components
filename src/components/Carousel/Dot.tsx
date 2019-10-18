@@ -1,6 +1,16 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+let a: number[] = [1, 2];
+let b: Array<number> = [1, 2];
+let c: ReadonlyArray<number> = a;
+console.log(a, b, c);
+interface SquareConfig {
+    color?: string;
+    width?: number;
+    [propName: string]: any;
+}
+
 interface IDotProps {
     selected: boolean;
     selectedColor?: string;
@@ -8,12 +18,12 @@ interface IDotProps {
 
 const Dot = styled.span<IDotProps>`
     display: inline-block;
-    width: 0.3rem;
-    height: 0.3rem;
-    border-radius: 50%;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.6rem;
     background-color: ${props => props.selected ? props.selectedColor || '#da373d' : 'grey'};
 
-    margin: 0.3rem 0.15rem;
+    margin: 0 0.3rem;
     opacity: ${props => props.selected ? 1 : 0.3};
     transition-duration: 0.3s;
 `;
