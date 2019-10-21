@@ -1,4 +1,7 @@
 module.exports = {
+    env: {
+        "jest": true
+    },
     extends: [
         'eslint-config-alloy/react', // 支持对 tsx 文件的检查
         'eslint-config-alloy/typescript',
