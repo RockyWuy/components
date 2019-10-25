@@ -1,10 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-let a: number[] = [1, 2];
-let b: Array<number> = [1, 2];
-let c: ReadonlyArray<number> = a;
-console.log(a, b, c);
 interface SquareConfig {
     color?: string;
     width?: number;
