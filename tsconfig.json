@@ -10,24 +10,23 @@
     "jsx": "react",
     "baseUrl": ".",
     // "noEmitOnError": false, // 报错是不生成输出文件
-    "paths":  {
+    "paths": {
       "@components/*": ["./components/*"],
       "@themes/*": ["./themes/*"],
       "@utils/*": ["./utils/*"]
     }
     // "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查, 解决引入styled-components时所报错误
     // "types": [ // 要包含的类型声明文件名列表 去掉react-native  解决引入styled-components时所报错误 同时引入react及react-native
-      // "node", 
-      // "react",
-      // "react-dom",
-      // "styled-components",
-      // "react-native"
+    // "node",
+    // "react",
+    // "react-dom",
+    // "styled-components",
+    // "react-native"
     // ]
   },
-  "include": [
-    "./**/*"
-  ],
-  "exclude": [ // 这个目录下的代码不会被 typescript 处理
+  "include": ["./**/*"],
+  "exclude": [
+    // 这个目录下的代码不会被 typescript 处理
     "node_modules"
   ]
 }
